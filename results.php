@@ -9,7 +9,9 @@ if (!empty($_GET['location'])){
   '?address=' . urlencode($_GET['location']);
   $maps_json = file_get_contents($maps_url);
   $maps_array = json_decode($maps_json, true);
+  // Getting the latitude from the Google maps API
   $lat = $maps_array['results'][0]['geometry']['location']['lat'];
+  // Getting the longitude from the Google maps API
   $lng = $maps_array['results'][0]['geometry']['location']['lng'];
   /**
    * Time to make our Instagram api request. We'll build the url using the
@@ -29,8 +31,10 @@ if (!empty($_GET['location'])){
   <head>
     <meta charset="utf-8"/>
     <title>InstaGeoSearch</title>
+        <!--Link to results style sheet-->
         <link rel="stylesheet" type="text/css" href="resultstyle.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <!--Google Analytics-->
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -45,7 +49,9 @@ if (!empty($_GET['location'])){
   </head>
   <body>
   <center>
+      <!--Just a normal form with a get method-->
     <form action="results.php" method="get">
+        <!--Setting the placeholder to the previous search -->
       <input type="text" name="location" placeholder="<?php echo ($_GET['location']); ?>"/>
     </form>
     <br/>
@@ -56,9 +62,11 @@ if (!empty($_GET['location'])){
     <?php
     if(!empty($instagram_array)){
       foreach($instagram_array['data'] as $key=>$image){
-        //Requesting image and make it clickable
+        //Requesting image and making it clickable
         echo '<div id="box"> <div class="picture"> <a href='.$image['link'].'> <img src="'.$image['images']['standard_resolution']['url'].'"/></a></br></div>';
+        //Requesting the username and making it clickable
         echo '<div class="username"> <a href=https://instagram.com/'.$image['user']['username'].'>'.$image['user']['username'].'</a></div>';
+        //Getting the like count
         echo '<div class="likes">'.$image['likes']['count'].' Likes</div></div>';
 
       }

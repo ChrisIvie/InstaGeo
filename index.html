@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <title>InstaGeoSearch</title>
+        <!--Link to StyleSheet-->
         <link rel="stylesheet" type="text/css" href="homestyle.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
@@ -11,16 +12,17 @@
 <center>
   <div id="searchbox">
     <p>Search location for instagram posts!</p>
+    <!--Just a normal form with a get method-->
     <form action="results.php" method="get">
       <input type="text" name="location" placeholder="New York City"/>
     </form>
   </div>
 </center>
 
-  <video controls muted autoplay loop id="bgvid">
-  <source src="mp4/New-York-Jam.mp4" type="video/mp4">
+<!--Looping Video for background-->
+<video controls muted autoplay loop id="bgvid">
+  <source src="videos/New-York-Jam.mp4" type="video/mp4">
+  <source src="videos/New-York-Jam.webm" type="video/webm">
 
-
-  </body>
-    </video>
+</video>
 </html>
