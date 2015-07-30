@@ -1,0 +1,4 @@
+-- July 28th 2015 --
+Add a search form at the top of results.php.
+Make the CSS responsive for mobile devices.
+Get GEO location working. 

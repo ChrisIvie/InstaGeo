@@ -1,0 +1,83 @@
+p{
+font-family: 'Open Sans', sans-serif;
+font-size: 20px;
+}
+
+
+#wrapper{
+  width:720px;
+  border: 0px solid black;
+}
+
+#box{
+   width:100%;
+   height: 800px;
+   border-radius: 3px;
+   border: 0px solid #edeeee;
+   margin-top: 10px;
+   background-color: white;
+   -webkit-box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.13);
+   -moz-box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.13);
+   box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.13);
+   padding-top:20px;
+
+}
+
+#box:first-child{
+  margin-top:none;
+}
+
+.picture{
+height: 100%;
+width: 720px;
+}
+
+
+.picture:hover{
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.13);
+  -moz-box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.13);
+  box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.13);
+
+}
+
+input{
+  margin-top: 0%;
+  width: 320px;
+  height: 40px;
+  text-align: left;
+  font-size: 20px;
+
+}
+
+
+.username{
+margin-top: -150px;
+font-size: 25px;
+color: #2A363B;
+font-family: 'Open Sans', sans-serif;
+margin-right:450px;
+margin-bottom:130px;
+text-align: left;
+margin-left:40px;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+a:hover{
+  color:black;
+}
+
+.likes{
+  font-family: 'Open Sans', sans-serif;
+  text-align:right;
+  margin-right:45px;
+  margin-top:-160px;
+}
+
+html{
+  background-color: #E9EAED;
+
+}
