@@ -31,13 +31,21 @@
             var yeahspace = '';
             var lat_clean = encodeURIComponent(position.coords.latitude);
             var lng_clean = encodeURIComponent(position.coords.longitude);
-            $.get("results.php?"+ location, {lat:position.coords.latitude, lng: position.coords.longitude});
+            console.log("results.php?"+ location, {lat:position.coords.latitude, lng: position.coords.longitude});
+            console.log("/results.php?"+ location + lat_clean + "+" + lng_clean);
             console.log(lat_clean);
             console.log(lng_clean);
 
+            var url = "results.php?"+ location + lat_clean + "+" + lng_clean;
+            console.log(url);
+
+            window.location.replace("results.php?"+ location + lat_clean + "+" + lng_clean);
+
             var instagramURL = "https://api.instagram.com/v1/media/search?lat="+lat_clean+
               "&lng="+lng_clean+"&client_id=4173458cee254a64b15ba24f9e5a40fc";
-            document.write('<a  href="' + instagramURL + '"> Link to JSON </a>');
+            //document.write('<a  href="' + instagramURL + '"> Link to JSON </a>');
+            document.write('<a  href="' + url + '"> Link to Page </a>');
+            window.location = url;
 
             //var InstaData = JSON.parse(instagramURL);
             //var results = document.getElementById("results");
@@ -56,7 +64,7 @@
   </script>
 </head>
 <body>
-    <button onclick="getLocation();">Get My Location</button>
+    <button onclick="getLocation(); return false">Get My Location</button>
     <div id="results"></div>
 
     <div id="images"></div>
