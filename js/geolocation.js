@@ -1,3 +1,5 @@
+
+
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(savePosition, positionError, {timeout:10000});
@@ -19,23 +21,18 @@ function positionError(error) {
 
 
 function savePosition(position) {
+          // Creating a variable so i can include the =
           var location = "location=";
-          //var yeahspace = '';
+          // Another variable with encodeURIComponent so its a clean URL.
           var lat_clean = encodeURIComponent(position.coords.latitude);
           var lng_clean = encodeURIComponent(position.coords.longitude);
-          console.log("results.php?"+ location, {lat:position.coords.latitude, lng: position.coords.longitude});
-          console.log("/results.php?"+ location + lat_clean + "+" + lng_clean);
-          //console.log(lat_clean);
-          //console.log(lng_clean);
-
+          // Setting the URL variable to avoid mix ups during the redirect
           var url = "results.php?"+ location + lat_clean + "+" + lng_clean;
-          //console.log(url);
 
-          //window.location.replace("results.php?"+ location + lat_clean + "+" + lng_clean);
-
+          //Used this URL for console.log, still going to keep it here just in case
           var instagramURL = "https://api.instagram.com/v1/media/search?lat="+lat_clean+
             "&lng="+lng_clean+"&client_id=4173458cee254a64b15ba24f9e5a40fc";
-          //document.write('<a  href="' + instagramURL + '"> Link to JSON </a>');
+
           document.write('Loading..');
           window.location = url;
 

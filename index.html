@@ -4,18 +4,10 @@
     <meta charset="utf-8"/>
     <title>InstaGeoSearch</title>
         <!--Link to StyleSheet-->
-        <link rel="stylesheet" type="text/css" href="homestyle.css">
+        <link rel="stylesheet" type="text/css" href="css/homestyle.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <script src="js/geolocation.js"></script>
   </head>
-
-
-
-
-  </script>
-
-
-
 
 <center>
   <div id="searchbox">
@@ -24,9 +16,18 @@
     <form action="results.php" method="get">
       <input type="text" name="location" placeholder="New York City"/>
     </form>
-    <p> Or search from <button onclick="getLocation();">current location</button></p>
+
+        <p> Or search by <div id="button"><a onclick="getLocation();">current location</a></div>
+
   </div>
 </center>
+
+<div id="contactme">
+  <center>
+  <p> Made by <a href="https://twitter.com/chrisknowshtml">@chrisknowshtml</a> also fork me on <a href="https://github.com/ChrisIvie/InstaGeo">GitHub.</p>
+  </center>
+</div>
+
 
 <!--Looping Video for background-->
 <video controls muted autoplay loop id="bgvid">

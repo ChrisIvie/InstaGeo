@@ -2,7 +2,7 @@ p{
 font-family: 'Open Sans', sans-serif;
 font-size: 20px;
 margin-top:10px;
-
+color: white;
 }
 
 input{
@@ -38,4 +38,29 @@ z-index: -100;
 transform: translateX(-50%) translateY(-50%);
 background: url(polina.jpg) no-repeat;
 background-size: cover;
+}
+
+a:link {
+  text-decoration: none;
+  color: blue;
+}
+a:visited {
+  text-decoration: none;
+  color:blue
+}
+#contactme{
+  margin-top:20%;
+}
+
+#button{
+   width:130px;
+   background-color:#0077fd;
+   color:white;
+   height:35px;
+   vertical-align:middle;
+   display: table-cell;
+   font-family: 'Open Sans', sans-serif;
+   cursor:pointer;
+
+
 }
