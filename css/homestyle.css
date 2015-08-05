@@ -21,8 +21,6 @@ input{
   height:150px;
   width:50%;
   color: white;
-
-
 }
 
 video#bgvid {
@@ -36,7 +34,6 @@ height: auto;
 z-index: -100;
 -webkit-transform: translateX(-50%) translateY(-50%);
 transform: translateX(-50%) translateY(-50%);
-background: url(polina.jpg) no-repeat;
 background-size: cover;
 }
 
@@ -46,7 +43,7 @@ a:link {
 }
 a:visited {
   text-decoration: none;
-  color:blue
+  color:blue;
 }
 #contactme{
   margin-top:20%;

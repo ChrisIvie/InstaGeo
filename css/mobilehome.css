@@ -1,0 +1,65 @@
+p{
+font-family: 'Open Sans', sans-serif;
+font-size: 50px;
+}
+
+input{
+  margin-top: 0%;
+  width: 90%;
+  height: 80px;
+  text-align: center;
+  font-size: 60px;
+  margin:auto;
+}
+
+#searchbox{
+  margin-top:20%;
+  height:150px;
+  width:100%;
+  color: white;
+}
+
+#button{
+   width:80%;
+   background-color:#0077fd;
+   color:white;
+   height:120px;
+   vertical-align:middle;
+   display: table-cell;
+   font-family: 'Open Sans', sans-serif;
+   cursor:pointer;
+   font-size: 50px;
+   margin-top: 30px;
+   border-radius: 5px;
+
+
+}
+
+#contactme{
+  margin-top:80%;
+}
+
+
+
+html,body {
+    background: url(../images/iceland.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
+    background-size: cover;         /* Generic*/
+}
+
+
+video{
+  display: none;
+}
+
+
+a:link {
+  text-decoration: none;
+  color: orange;
+}
+a:visited {
+  text-decoration: none;
+  color:orange;
+}
