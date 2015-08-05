@@ -36,6 +36,7 @@ function savePosition(position) {
           document.write('Loading..');
           window.location = url;
 
+          console.log(instagramURL);
           //var InstaData = JSON.parse(instagramURL);
           //var results = document.getElementById("results");
           //results.innerHTML = InstaData.link;

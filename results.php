@@ -21,7 +21,7 @@ if (!empty($_GET['location'])){
     'api.instagram.com/v1/media/search' .
     '?lat=' . $lat .
     '&lng=' . $lng .
-    '&client_id=4173458cee254a64b15ba24f9e5a40fc'; //replace "CLIENT-ID"
+    '&client_id=4173458cee254a64b15ba24f9e5a40fc&count=50'; //replace "CLIENT-ID"
   $instagram_json = file_get_contents($instagram_url);
   $instagram_array = json_decode($instagram_json, true);
 }
@@ -60,17 +60,39 @@ if (!empty($_GET['location'])){
 
     <div id="wrapper">
     <?php
+
     if(!empty($instagram_array)){
       foreach($instagram_array['data'] as $key=>$image){
-        //Requesting image and making it clickable
+        //Requesting image and making it clickable.
+        echo $image['videos']['standard_resolution']['url'];
         echo '<div id="box"> <div class="picture"> <a href='.$image['link'].'> <img src="'.$image['images']['standard_resolution']['url'].'"/></a></br></div>';
         //Requesting the username and making it clickable
         echo '<div class="username"> <a href=https://instagram.com/'.$image['user']['username'].'>'.$image['user']['username'].'</a></div>';
         //Getting the like count
         echo '<div class="likes">'.$image['likes']['count'].' Likes</div></div>';
 
+
+
+      //  if (get_fileext($image['videos']['standard_resolution']['url'])== "mp4") {
+
+      //  echo "Row has a filename with the mp4 extension";
+    //  }
+
       }
-    }
+   }
+
+
+    // check media type and skip this result if
+    //$media_type = $post->type;
+
+
+  //  if($media_type != 'videos'){
+    //  echo '<video width="320" height="240" controls>
+    //        <source src="'.$post['videos']['standard_resolution']['url'].'" type="video/mp4">
+      //        Your browser does not support the video tag.
+      //    </video>';
+
+
     ?>
 
 
