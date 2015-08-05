@@ -33,6 +33,7 @@ if (!empty($_GET['location'])){
     <title>InstaGeoSearch</title>
         <!--Link to results style sheet-->
         <link rel="stylesheet" type="text/css" href="css/resultstyle.css">
+        <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px)" href="css/mobileresults.css" />
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <!--Google Analytics-->
         <script>

@@ -39,11 +39,11 @@ background-size: cover;
 
 a:link {
   text-decoration: none;
-  color: blue;
+  color: orange;
 }
 a:visited {
   text-decoration: none;
-  color:blue;
+  color:orange;
 }
 #contactme{
   margin-top:20%;
