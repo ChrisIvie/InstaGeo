@@ -3,12 +3,28 @@
   <head>
     <meta charset="utf-8"/>
     <title>InstaGeoSearch</title>
+        <!--Facebook Share button-->
+        <meta property="og:url"           content="http://notgoogle.com/instageo/index.html" />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content="InstaGeoSearch" />
+        <meta property="og:description"   content="Search location for instagram posts!" />
+        <meta property="og:image"         content="http://notgoogle.com/instageo/images/iceland.jpg" />
         <!--Link to StyleSheet-->
         <link rel="stylesheet" type="text/css" href="css/homestyle.css">
         <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px)" href="css/mobilehome.css" />
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <script src="js/geolocation.js"></script>
   </head>
+
+
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
 
 <center>
   <div id="searchbox">
@@ -26,8 +42,20 @@
 <div id="contactme">
   <center>
   <p> Made by <a href="https://twitter.com/chrisknowshtml">@chrisknowshtml</a> also fork me on <a href="https://github.com/ChrisIvie/InstaGeo">GitHub.</a></p>
+  <!-- Your share button code -->
+  <div id="fb-root"></div>
+  <div class="fb-share-button"
+      data-href="http://notgoogle.com/instageo/"
+      data-layout="button_count">
+  </div>
   </center>
 </div>
+
+<div id="fb-root"></div>
+
+
+
+
 
 
 <!--Looping Video for background-->
