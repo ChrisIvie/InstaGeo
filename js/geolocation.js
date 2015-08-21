@@ -1,5 +1,3 @@
-
-
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(savePosition, positionError, {timeout:10000});

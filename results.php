@@ -45,6 +45,8 @@ if (!empty($_GET['location'])){
           ga('create', 'UA-65742139-1', 'auto');
           ga('send', 'pageview');
 
+
+//https://www.google.com/maps/place/40.5871839+-111.9241981
         </script>
 
   </head>
@@ -53,19 +55,31 @@ if (!empty($_GET['location'])){
       <!--Just a normal form with a get method-->
     <form action="results.php" method="get">
         <!--Setting the placeholder to the previous search -->
-      <input type="text" name="location" placeholder="<?php echo ($_GET['location']); ?>"/>
+      <input type="text" name="location" placeholder="Search"/>
     </form>
     <br/>
+
+      <div id=location>Location: <?php
+
+      $yeah = ($_GET['location']);
+      //echo ($_GET['location']);
+
+      echo ucfirst($yeah);
+
+      ?></div>
 
 
 
     <div id="wrapper">
+
+
     <?php
 
     if(!empty($instagram_array)){
       foreach($instagram_array['data'] as $key=>$image){
         //Requesting image and making it clickable.
         echo $image['videos']['standard_resolution']['url'];
+
         echo '<div id="box"> <div class="picture"> <a href='.$image['link'].'> <img src="'.$image['images']['standard_resolution']['url'].'"/></a></br></div>';
         //Requesting the username and making it clickable
         echo '<div class="username"> <a href=https://instagram.com/'.$image['user']['username'].'>'.$image['user']['username'].'</a></div>';
@@ -98,6 +112,12 @@ if (!empty($_GET['location'])){
 
 
 
+
+
+  </div>
+  <div id="footer">
+    <a href="https://github.com/ChrisIvie/InstaGeo"><img src="images/instageoongithub.png" alt="github" height="100%" width="100%"></a></br>
+    <p>"This site is shit!" If you think that please let us know through<a href="#"> Feedback</a>
   </div>
   </center>
   </body>

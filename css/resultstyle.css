@@ -81,3 +81,15 @@ html{
   background-color: #E9EAED;
 
 }
+
+
+#location{
+  color: #4b4f54;
+  font-size: 30px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+#footer{
+  margin-top:20px;
+}
